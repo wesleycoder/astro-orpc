@@ -4,14 +4,6 @@ import { CORSPlugin } from '@orpc/server/plugins'
 import type { APIContext } from 'astro'
 
 const router = {
-  hello: os
-    .route({
-      method: 'GET',
-      path: '/hello',
-    })
-    .handler(async () => {
-      return 'Hello World'
-    }),
   stream: os
     .route({
       method: 'GET',
@@ -30,7 +22,7 @@ const router = {
       try {
         while (!isAborted) {
           console.log(`yielding ${i}`)
-          yield `Hello World ${i++}\n`
+          yield `Hello World ${i++}`
           await new Promise((resolve) => setTimeout(resolve, 1000))
         }
       } finally {

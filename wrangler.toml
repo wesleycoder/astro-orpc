@@ -1,0 +1,14 @@
+name = "astro-orpc"
+main = "./dist/_worker.js/index.js"
+compatibility_date = "2025-05-27"
+
+[assets]
+binding = "ASSETS"
+directory = "./dist"
+
+[[kv_namespaces]]
+binding = "SESSION"
+id = "10bc900922944800a539b32d21e222d1"
+
+[observability]
+enabled = true
